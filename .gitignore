@@ -1,0 +1,6 @@
+.env
+rag-env/
+faiss_index/
+.idea/
+__pycache__/
+*.pyc
