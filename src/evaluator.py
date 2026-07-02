@@ -84,7 +84,7 @@ Task: Does this chunk contain specific information that actively helps satisfy t
 Provide a brief reasoning statement, then end your response with strictly: SCORE: 1.0 (if relevant) or SCORE: 0.0 (if completely irrelevant)."""
 
             response = self.client.messages.create(
-                model="claude-3-opus-20240229",
+                model="claude-opus-4-8",
                 max_tokens=150,
                 messages=[{"role": "user", "content": prompt}]
             )
@@ -111,7 +111,7 @@ Task: Break down the Expected Answer Behavior and Pass/Fail Criteria into essent
 Provide a concise breakdown, then output the final score in this format: SCORE: [float value between 0.0 and 1.0]"""
 
         response = self.client.messages.create(
-            model="claude-3-opus-20240229",
+            model="claude-opus-4-8",
             max_tokens=250,
             messages=[{"role": "user", "content": prompt}]
         )
@@ -137,7 +137,7 @@ Task: Examine the Generated AI Answer sentence-by-sentence. What proportion (fro
 Provide your verification steps, then output the final score in this format: SCORE: [float value between 0.0 and 1.0]"""
 
         response = self.client.messages.create(
-            model="claude-3-opus-20240229",
+            model="claude-opus-4-8",
             max_tokens=250,
             messages=[{"role": "user", "content": prompt}]
         )
@@ -161,7 +161,7 @@ Task: Rate how accurately and thoroughly the Generated AI Answer answers the Use
 Provide a brief critique, then output the final score in this format: SCORE: [float value between 0.0 and 1.0]"""
 
         response = self.client.messages.create(
-            model="claude-3-opus-20240229",
+            model="claude-opus-4-8",
             max_tokens=250,
             messages=[{"role": "user", "content": prompt}]
         )
