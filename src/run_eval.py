@@ -32,8 +32,7 @@ def run_batch_evaluation(client, rag_pipeline_func, dataset_file):
         # Note: We now correctly unpack the tuple as (answer, chunks)
         # Note: Depending on your specific orchestrator return,
         # ensure retrieved_chunks is the second item.
-        generated_answer, retrieved_chunks = rag_pipeline_func(query)
-
+        generated_answer, retrieved_chunks = rag_pipeline_func
         # 2. Evaluate
         metrics = evaluator.evaluate(
             id=test_id,
